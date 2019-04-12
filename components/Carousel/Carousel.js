@@ -4,11 +4,12 @@ class Carousel {
         this.imgs = this.element.querySelectorAll('img');
         this.btns = this.element.querySelectorAll('div');
 
-        console.log(this.element);
-        console.log(this.imgs);
-        console.log(this.btns);
+        // console.log(this.element);
+        // console.log(this.imgs);
+        // console.log(this.btns);
 
         this.imgCon = new Images(this.imgs);
+        this.btnCon = new Button(this.btns);
         
     }
 
@@ -17,8 +18,15 @@ class Carousel {
 
 class Images {
     constructor(images){
+
         this.images = images;
 
+        // console.log(this.images);
+        this.images.forEach((image, index = 0) => {
+            if(image.dataset.slide === 0){
+                image.style.display = 'block';
+            }
+        })
     }
     // Methods
 }
@@ -26,6 +34,7 @@ class Images {
 class Button {
     constructor(buttons){
         this.buttons = buttons;
+        // console.log(this.buttons);
     }
     // Methods
 }
