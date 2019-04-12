@@ -1,7 +1,17 @@
 class Carousel {
     constructor(element){
         this.element = element;
+        this.imgs = this.element.querySelectorAll('img');
+        this.btns = this.element.querySelectorAll('div');
+
         console.log(this.element);
+        console.log(this.imgs);
+        console.log(this.btns);
+
+        this.imgData = this.imgs.dataset.slide;
+        this.btnData = this.btns.dataset.slide;
+        // console.log(this.imgData);
+        // console.log(this.btnData);
     }
 }
 

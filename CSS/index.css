@@ -201,9 +201,6 @@ body {
   color: #333;
   border: 2px solid #333;
 }
-.cards .card-hide {
-  display: none;
-}
 .cards-container {
   display: flex;
   justify-content: space-evenly;
