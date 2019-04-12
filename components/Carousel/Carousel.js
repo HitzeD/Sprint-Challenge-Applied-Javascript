@@ -2,42 +2,47 @@ class Carousel {
     constructor(element){
         this.element = element;
         this.imgs = this.element.querySelectorAll('img');
-        this.btns = this.element.querySelectorAll('div');
-
+        this.leftButton = this.element.querySelector('.left-button');
+        this.rightButton = this.element.querySelector('.right-button');
+        this.index = 0;
         // console.log(this.element);
-        // console.log(this.imgs);
-        // console.log(this.btns);
+        console.log(this.leftButton);
+        console.log(this.rightButton);
 
-        this.imgCon = new Images(this.imgs);
-        this.btnCon = new Button(this.btns);
+        this.leftButton.addEventListener('click', () => this.backward());
+        this.rightButton.addEventListener('click', () => this.forward());
+    }
+
+    forward(){
         
     }
-
     // Methods
-}
+    backward(){
 
-class Images {
-    constructor(images){
-
-        this.images = images;
-
-        // console.log(this.images);
-        this.images.forEach((image, index = 0) => {
-            if(image.dataset.slide === 0){
-                image.style.display = 'block';
-            }
-        })
     }
-    // Methods
 }
 
-class Button {
-    constructor(buttons){
-        this.buttons = buttons;
-        // console.log(this.buttons);
-    }
-    // Methods
-}
+// class Images {
+//     constructor(images){
+//         this.images = images;
+//         // console.log(this.images);
+//         this.images.forEach((image, index = 0) => {
+//             if(image.dataset.slide === 1){
+//                 console.log(image);
+//                 image.style.display = 'block';
+//             }
+//         })
+//     }
+//     // Methods
+// }
+
+// class Button {
+//     constructor(buttons){
+//         this.buttons = buttons;
+//         // console.log(this.buttons);
+//     }
+//     // Methods
+// }
 
 let carousel = document.querySelector('.carousel');
 // console.log(carousel);
