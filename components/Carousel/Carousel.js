@@ -7,17 +7,26 @@ class Carousel {
         console.log(this.element);
         console.log(this.imgs);
         console.log(this.btns);
+
+        this.imgCon = new Images(this.imgs);
         
     }
 
     // Methods
 }
 
-class Button {
-    constructor(element){
-        this.element = element;
-    }
+class Images {
+    constructor(images){
+        this.images = images;
 
+    }
+    // Methods
+}
+
+class Button {
+    constructor(buttons){
+        this.buttons = buttons;
+    }
     // Methods
 }
 
