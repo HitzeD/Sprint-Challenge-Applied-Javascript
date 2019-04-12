@@ -7,19 +7,19 @@ class Carousel {
         console.log(this.element);
         console.log(this.imgs);
         console.log(this.btns);
-
-        this.imgData = this.imgs.dataset.slide;
-        this.btnData = this.btns.dataset.slide;
-        // console.log(this.imgData);
-        // console.log(this.btnData);
+        
     }
+
+    // Methods
 }
 
-// class Button {
-//     constructor(element){
-//         this.element = element;
-//     }
-// }
+class Button {
+    constructor(element){
+        this.element = element;
+    }
+
+    // Methods
+}
 
 let carousel = document.querySelector('.carousel');
 // console.log(carousel);
