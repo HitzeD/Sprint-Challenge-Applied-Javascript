@@ -5,44 +5,36 @@ class Carousel {
         this.leftButton = this.element.querySelector('.left-button');
         this.rightButton = this.element.querySelector('.right-button');
         this.index = 0;
-        // console.log(this.element);
-        console.log(this.leftButton);
-        console.log(this.rightButton);
-
+        this.imgs[0].style.display = 'block'
+        // console.log()
+        // 
         this.leftButton.addEventListener('click', () => this.backward());
         this.rightButton.addEventListener('click', () => this.forward());
+        // console.log(this.imgData);
     }
 
     forward(){
+        this.imgs[this.index].style.display = 'none'
+        if(this.index === this.imgs.length - 1){
+            this.index = 0
+        } else {
+            this.index = this.index + 1
+        }
+        this.imgs[this.index].style.display = 'block'
         
     }
-    // Methods
+    
     backward(){
+        this.imgs[this.index].style.display = 'none'
+        if(this.index === 0){
+            this.index = this.imgs.length-1
+        } else {
+            this.index = this.index - 1
+        }
+        this.imgs[this.index].style.display = 'block'
 
     }
 }
-
-// class Images {
-//     constructor(images){
-//         this.images = images;
-//         // console.log(this.images);
-//         this.images.forEach((image, index = 0) => {
-//             if(image.dataset.slide === 1){
-//                 console.log(image);
-//                 image.style.display = 'block';
-//             }
-//         })
-//     }
-//     // Methods
-// }
-
-// class Button {
-//     constructor(buttons){
-//         this.buttons = buttons;
-//         // console.log(this.buttons);
-//     }
-//     // Methods
-// }
 
 let carousel = document.querySelector('.carousel');
 // console.log(carousel);
